@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Documentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4 text-center">Upload de Documentos</h1>
+        <p class="text-gray-600 mb-4 text-center">Envie seu documento de identidade com foto e uma selfie para
+            validação.</p>
+        <p class="text-yellow-600 mb-4 text-center font-semibold">Aviso: A análise pode demorar alguns segundos, por
+            favor, aguarde.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="document" class="block text-gray-700 font-medium mb-2">Documento de Identidade com
+                    Foto</label>
+                <input type="file" name="document" id="document" accept="image/*" class="w-full p-2 border rounded-lg"
+                    required>
+            </div>
+            <div class="mb-4">
+                <label for="selfie" class="block text-gray-700 font-medium mb-2">Foto do Rosto (Selfie)</label>
+                <input type="file" name="selfie" id="selfie" accept="image/*" class="w-full p-2 border rounded-lg"
+                    required>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

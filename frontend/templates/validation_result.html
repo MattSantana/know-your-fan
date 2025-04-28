@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Validação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Resultado da Validação</h1>
+        <p class="text-gray-700 mb-2"><strong>CPF Extraído:</strong> {{ cpf_extracted }}</p>
+        <p class="text-gray-700 mb-4">
+            <strong>Validação Facial:</strong>
+            {% if face_match %}
+            <span class="text-green-600">Faces coincidem! ✅</span>
+            {% else %}
+            <span class="text-red-600">Faces não coincidem. ❌</span>
+            {% endif %}
+        </p>
+        {% if error_message %}
+        <p class="text-red-600 mb-4">{{ error_message }}</p>
+        {% endif %}
+        <p class="text-gray-700 mb-4">Você será redirecionado para a validação de esports em <span
+                id="countdown">5</span> segundos...</p>
+        <a href="/esports" class="text-blue-500 hover:underline">Ir agora</a>
+        <script>
+            let countdown = 5;
+            const countdownElement = document.getElementById("countdown");
+            const interval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(interval);
+                    window.location.href = "/esports";
+                }
+            }, 1000);
+        </script>
+    </div>
+</body>
+
+</html>
