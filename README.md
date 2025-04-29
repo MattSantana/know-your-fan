@@ -65,3 +65,11 @@ Antes de executar a aplicação, é necessário ter os seguintes itens instalado
 
 ```bash
 pip install fastapi uvicorn jinja2 opencv-python pytesseract face_recognition requests beautifulsoup4 textblob numpy
+```
+---
+
+## 🎥 Vídeo de Demonstração
+
+Um vídeo testando o funcionamento da aplicação está disponível no repositório.  
+Ao clonar o projeto, você pode assistir ao vídeo para ver o bot em ação e entender como os comandos funcionam na prática.
+
