@@ -70,6 +70,6 @@ pip install fastapi uvicorn jinja2 opencv-python pytesseract face_recognition re
 
 ## 🎥 Vídeo de Demonstração
 
-Um vídeo testando o funcionamento da aplicação está disponível no repositório.  
-Ao clonar o projeto, você pode assistir ao vídeo para ver o bot em ação e entender como os comandos funcionam na prática.
+Um vídeo demonstrando o funcionamento da aplicação está disponível no repositório.  
+Após clonar o projeto, você pode assistir ao vídeo para entender melhor como o app funciona na prática, desde o preenchimento do formulário até a validação da identidade e análise de engajamento com esports.
 
