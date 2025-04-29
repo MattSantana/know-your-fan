@@ -54,9 +54,13 @@ O fluxo de uso é o seguinte:
 Antes de executar a aplicação, é necessário ter os seguintes itens instalados:
 
 - **Python 3.8 ou superior**: Para executar o código.
-- **Tesseract OCR**: Para extrair o CPF do RG. Faça o download e instale a partir deste link: [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki).  
+- **Tesseract OCR (obrigatório)**: Essa ferramenta é essencial para extrair o CPF do RG.  
+  Você precisará baixar e instalar o Tesseract no seu sistema. Faça o download aqui: [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki).  
+  Após a instalação, anote o caminho onde o `tesseract.exe` foi instalado (ex.: `C:\Program Files\Tesseract-OCR\tesseract.exe`).  
   No código, o caminho está configurado como `G:\Program Files\Tesseract-OCR\tesseract.exe`.  
-  Caso o caminho seja diferente no seu sistema, ajuste no arquivo `main.py`.
+
+  > ⚠️ Atenção: se o Tesseract estiver em um caminho diferente no seu sistema, você deve atualizar o caminho na variável `tesseract_path` no arquivo `backend/main.py`, senão o app não vai funcionar.
+
 - **Dependências do Python**: Instale as bibliotecas necessárias com o seguinte comando:
 
 ```bash
